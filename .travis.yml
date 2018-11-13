@@ -8,5 +8,5 @@ install:
   - pip install -e .
 
 script:
-  - wooqi --seq-config testing/uut_feature/actions/uut_different_actions.ini --sn wooqi_tests -s
+  - wooqi --seq-config testing/loop_feature/tests/loop_different_tests_uut.ini --sn wooqi_tests -s
   - ./run_wooqi_tests.sh
