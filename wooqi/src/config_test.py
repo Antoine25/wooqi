@@ -23,7 +23,7 @@ class ConfigTest(object):
             parser = SafeConfigParser()
             parser.optionxform = str
             file_parse = parser.read(config_file)
-        except Exception, error:
+        except Exception as error:
             msg = 'Problem while parsing configuration file %s (%s)' % (
                 config_file, error)
             print(msg)
