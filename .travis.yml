@@ -7,4 +7,6 @@ python:
 install:
   - pip install -e .
 
-script: ./run_wooqi_tests.sh
+script:
+  - wooqi --seq-config testing/postfail_feature/tests/postfail_next_step.ini --sn wooqi_tests -s
+  - ./run_wooqi_tests.sh
