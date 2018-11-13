@@ -39,7 +39,7 @@ class ConfigTest(object):
             for option in parser.options(section):
                 dict_tmp[option] = parser.get(section, option)
             file_config[section] = dict_tmp
-            file_config[section]["test_order"] = file_config.keys().index(
+            file_config[section]["test_order"] = list(file_config.keys()).index(
                 section) + 1
 
         self.file_config = file_config
