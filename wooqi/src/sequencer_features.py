@@ -195,9 +195,7 @@ def filter_order_tests(config, items):
             list_temp.append([test_order, item])
 
     # Order items
-    # import pdb
-    # pdb.set_trace()
-    sorted(list_temp)
+    list_temp.sort(key=lambda x: x[0])
     items_temp = []
     for item in list_temp:
         if str(item[1]).count('LOOP_TEST'):
