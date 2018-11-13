@@ -11,7 +11,7 @@ import os
 import re
 from sys import exit
 import collections
-from ConfigParser import SafeConfigParser
+from configparser import SafeConfigParser
 
 
 class ConfigTest(object):
