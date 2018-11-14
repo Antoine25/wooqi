@@ -200,7 +200,7 @@ def filter_order_tests(config, items):
     for item in list_temp:
         if str(item[1]).count('LOOP_TEST'):
             # Insert all tests of loop option instead of fake item
-            list_loop_temp.sort()
+            list_loop_temp.sort(key=lambda x: (x[0], x[1]))
             for loop_item in list_loop_temp:
                 items_temp.append(loop_item[2])
         else:
