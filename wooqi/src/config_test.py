@@ -95,10 +95,10 @@ class ConfigTest(object):
         """
         Return range list
         """
-        range_args = map(int, re.findall("([0-9]+)", string))
+        range_args = list(map(int, re.findall("([0-9]+)", string)))
         if len(range_args) == 2:
             range_args.append(1)
-        return map(str, list(range(range_args[0], range_args[1], range_args[2])))
+        return list(map(str, list(range(range_args[0], range_args[1], range_args[2]))))
 
     @staticmethod
     def _get_folders(string):
