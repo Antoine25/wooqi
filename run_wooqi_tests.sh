@@ -29,4 +29,8 @@ result6=$?
 testing/range_feature/./run_wooqi_range_tests.sh
 result7=$?
 
+echo $result7
+
+echo $result1 || $result2 || $result3 || $result4 || $result5 || $result6 || $result7
+
 exit $result1 || $result2 || $result3 || $result4 || $result5 || $result6 || $result7
