@@ -9,4 +9,5 @@ install:
 
 script:
   - wooqi --seq-config testing/loop_feature/tests/loop_different_tests_uut.ini --sn wooqi_tests -s
+  - wooqi --seq-config testing/range_feature/range_with_3_args.ini --sn wooqi_tests -s
   - ./run_wooqi_tests.sh
