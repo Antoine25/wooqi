@@ -9,9 +9,10 @@ jobs:
   release:
     runs-on: ubuntu-latest
     concurrency: release
+
     permissions:
-      id-token: write
       contents: write
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -23,11 +24,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install python-semantic-release build
-
-      - name: Semantic Release
         run: |
-          semantic-release version --changelog --push
-          semantic-release publish
+          pip install python-semantic-release build
+
+      - name: Run Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          semantic-release version
+          semantic-release publish
