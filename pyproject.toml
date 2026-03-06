@@ -41,8 +41,10 @@ python_functions = ["action_*", "test_*"]
 version_toml = ["pyproject.toml:project.version"]
 version_variables = ["wooqi/__init__.py:__version__"]
 branch = "master"
-changelog_file = "CHANGELOG.md"
 build_command = "pip install build && python -m build"
+
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
 
 [tool.semantic_release.commit_parser_options]
 allowed_tags = ["feat", "fix", "perf", "refactor", "docs", "style", "test", "chore", "build", "ci"]

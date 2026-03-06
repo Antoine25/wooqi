@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+## [2.2.0] - 2026-03-06
+
+### Added
+- Update pre-commit ([`7068ea3`](https://github.com/Antoine25/wooqi/commit/7068ea3))
+
+### Fixed
+- Changelog ([`f6eecf5`](https://github.com/Antoine25/wooqi/commit/f6eecf5))
+
+---
+
 ## [2.1.2] - 2026-03-06
 
 ### Fixed
@@ -77,6 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ---
 
+[2.2.0]: https://github.com/Antoine25/wooqi/compare/v2.1.2...v2.2.0
 [2.1.2]: https://github.com/Antoine25/wooqi/compare/v2.1.1...v2.1.2
 [2.1.1]: https://github.com/Antoine25/wooqi/compare/v2.1.0...v2.1.1
 [2.1.0]: https://github.com/Antoine25/wooqi/compare/v2.0.1...v2.1.0
