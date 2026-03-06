@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org)
 [![GitHub release](https://img.shields.io/github/v/release/Antoine25/wooqi)](https://github.com/Antoine25/wooqi/releases)
 
+
 ## Introduction
 
 **Wooqi** is a plugin for the [Python](https://www.python.org) module named
@@ -36,27 +37,24 @@ pytest plugin.
 
 ## Installation
 
-You can install wooqi as a pip package.
+You can install wooqi as a pip package:
 
-    pip install wooqi --user
+    pip install wooqi
 
-Or you can clone the depository, and manually build and install the package:
+Or clone the repository and install in editable mode:
 
-    python setup.py bdist
-    pip install dist/<package_name>
-
-Where `<package_name>` is the name of the wooqi package with its version
+    git clone https://github.com/Antoine25/wooqi.git
+    cd wooqi
+    pip install -e .
 
 ### Dependencies:
 
-* **pytest**
-	`pip install pytest --user --upgrade`
-    * **pytest-rerunfailures**
-	`pip install pytest-rerunfailures --user --upgrade`
-    * **pytest-timeout**
-	`pip install pytest-timeout --user --upgrade`
-    * **pytest-spec**
-	`pip install pytest-spec --user --upgrade`
+All dependencies are automatically installed with pip. For reference:
+
+* **pytest** `>=7.0`
+* **pytest-rerunfailures** `>=13.0`
+* **pytest-timeout** `>=2.0`
+* **pytest-spec** `>=3.0`
 
 ## Your wooqi project
 
