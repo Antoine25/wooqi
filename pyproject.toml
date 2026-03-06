@@ -41,6 +41,7 @@ python_functions = ["action_*", "test_*"]
 version_toml = ["pyproject.toml:project.version"]
 version_variables = ["wooqi/__init__.py:__version__"]
 branch = "master"
+changelog_file = "CHANGELOG.md"
 build_command = "pip install build && python -m build"
 
 [tool.semantic_release.commit_parser_options]
@@ -64,11 +65,3 @@ extend-select = ["I"]
 [tool.ruff.lint.per-file-ignores]
 # Fixtures and hooks imported here are discovered by pytest at collection time
 "wooqi/plugin.py" = ["F401"]
-
-[tool.semantic_release.changelog]
-template_dir = ".semantic_release/templates"
-default_templates.changelog_file = "CHANGELOG.md"
-exclude_commit_patterns = [
-    "^Merge",
-    "^Automatically generated",
-]
