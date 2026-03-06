@@ -35,5 +35,8 @@ jobs:
       - name: Install dependencies
         run: pip install -e .
 
-      - name: Run tests
+      - name: Run unit tests
+        run: pytest tests/ -v
+
+      - name: Run integration tests
         run: bash run_wooqi_tests.sh
