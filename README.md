@@ -1,7 +1,8 @@
 # Wooqi test sequencer
-[![PyPI version fury.io](https://img.shields.io/pypi/v/wooqi.png)](https://pypi.python.org/pypi/wooqi/)
-[![PyPI license](https://img.shields.io/pypi/l/wooqi.svg)](https://pypi.python.org/pypi/wooqi/)
-[![Build Status](https://travis-ci.org/aldebaran/wooqi.svg?branch=master)](https://travis-ci.org/aldebaran/wooqi)
+[![CI](https://github.com/Antoine25/wooqi/actions/workflows/ci.yml/badge.svg)](https://github.com/Antoine25/wooqi/actions/workflows/ci.yml)
+[![Release](https://github.com/Antoine25/wooqi/actions/workflows/release.yml/badge.svg)](https://github.com/Antoine25/wooqi/actions/workflows/release.yml)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org)
+[![GitHub release](https://img.shields.io/github/v/release/Antoine25/wooqi)](https://github.com/Antoine25/wooqi/releases)
 
 ## Introduction
 
