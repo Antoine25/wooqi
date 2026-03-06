@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wooqi"
-version = "2.2.0"
+version = "2.2.1"
 description = "Pytest plugin allowing to parametrize all the test sequence thanks to a config file"
 readme = "README.md"
 license = { text = "BSD-3" }
