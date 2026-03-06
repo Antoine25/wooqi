@@ -10,6 +10,7 @@ wooqi entry point
 
 import os
 import shutil
+import subprocess
 import sys
 
 from wooqi import __version__
@@ -88,7 +89,6 @@ def main(args=None):
     """
     if args is None:
         args = sys.argv[1:]
-    arguments = ""
     if "--help" in args or "-h" in args:
         print_usage()
     elif "--version" in args or "-v" in args:
@@ -98,18 +98,12 @@ def main(args=None):
     elif "--seq-config" in args:
         if "--ff" not in args and "--lf" not in args:
             args.append("--cache-clear")
-        arguments = " ".join(args)
         print("*********************************")
         print("***** Wooqi tests sequencer *****")
         print("*********************************")
-        # On Unix, the return value is a 16-bit number that contains
-        # two different pieces of information. From the documentation:
-        # low byte is the signal number that killed the process
-        # high byte is the exit status (if the signal number is zero)
-        val = os.system("py.test {} --spec --wooqi".format(arguments))
-        if val & 0xF > 0:
-            val = val + 255
-        exit(val >> 8)
+        cmd = ["pytest"] + args + ["--spec", "--wooqi"]
+        result = subprocess.run(cmd)
+        exit(result.returncode)
     else:
         print("Error: unknown Wooqi command ! Please see usage below.")
         print_usage()

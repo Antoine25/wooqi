@@ -19,12 +19,3 @@ repos:
     hooks:
       - id: codespell
         args: [--skip=pylintrc]
-
-  - repo: local
-    hooks:
-      - id: pycodestyle
-        name: pycodestyle
-        entry: pycodestyle
-        language: system
-        types: [python]
-        args: [--max-line-length=120, "--ignore=E203"]

@@ -8,6 +8,7 @@
 TestConfig Class
 """
 
+import ast
 import os
 import re
 from collections import OrderedDict
@@ -163,7 +164,7 @@ class ConfigTest(object):
                 parameter = param
             elif "|" not in param and ":" not in param:
                 if evaluate:
-                    parameter = eval(param)
+                    parameter = ast.literal_eval(param)
                 else:
                     parameter = param
             else:
@@ -172,7 +173,7 @@ class ConfigTest(object):
                 for each in params:
                     tab = each.split(":")
                     if evaluate:
-                        dico[tab[0]] = eval(tab[1])
+                        dico[tab[0]] = ast.literal_eval(tab[1])
                     else:
                         dico[tab[0]] = tab[1]
 
