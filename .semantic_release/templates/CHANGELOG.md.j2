@@ -1,0 +1,51 @@
+{% for version, release in context.history.released.items() %}
+## {{ version.as_tag() }} ({{ release.tagged_date.strftime("%Y-%m-%d") }})
+
+{% if release.elements["feat"] %}
+### 🚀 Features
+{% for commit in release.elements["feat"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+{% if release.elements["fix"] %}
+### 🐛 Bug Fixes
+{% for commit in release.elements["fix"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+{% if release.elements["perf"] %}
+### ⚡ Performance
+{% for commit in release.elements["perf"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+{% if release.elements["refactor"] %}
+### ♻️ Refactoring
+{% for commit in release.elements["refactor"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+{% if release.elements["docs"] %}
+### 📖 Documentation
+{% for commit in release.elements["docs"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+{% if release.elements["test"] %}
+### 🧪 Tests
+{% for commit in release.elements["test"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+{% if release.elements["build"] or release.elements["ci"] %}
+### 🔧 Build & CI
+{% for commit in release.elements["build"] + release.elements["ci"] %}
+- {{ commit.descriptions[0] | capitalize }} ([`{{ commit.short_hash }}`]({{ commit.hexsha | commit_hash_url }}))
+{% endfor %}
+{% endif %}
+
+---
+
+**Full Changelog**: [{{ context.history.unreleased | first if context.history.unreleased else "" }}{{ version.as_tag() }}]({{ version | changelog_url }})
+
+{% endfor %}
