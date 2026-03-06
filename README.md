@@ -47,15 +47,6 @@ Or clone the repository and install in editable mode:
     cd wooqi
     pip install -e .
 
-### Dependencies:
-
-All dependencies are automatically installed with pip. For reference:
-
-* **pytest** `>=7.0`
-* **pytest-rerunfailures** `>=13.0`
-* **pytest-timeout** `>=2.0`
-* **pytest-spec** `>=3.0`
-
 ## Your wooqi project
 
 Wooqi is only a test sequencer and does not contain some tests itself. It means that you must create
