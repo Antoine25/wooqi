@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/aldebaran/wooqi"
+Homepage = "https://github.com/Antoine25/wooqi"
 Download = "https://pypi.org/project/wooqi/"
 
 [project.entry-points."pytest11"]

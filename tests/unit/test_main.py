@@ -96,4 +96,3 @@ class TestMainSeqConfig:
             main(["--seq-config", "seq.ini", "--sn", "sample"])
 
         assert exc_info.value.code == 1
-
